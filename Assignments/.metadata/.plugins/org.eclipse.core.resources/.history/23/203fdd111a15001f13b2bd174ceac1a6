@@ -1,0 +1,10 @@
+package task5;
+
+public class removeDupFromLL {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package task2;
+
+
+
+class LinkedList<T>{
+	class Node{
+		T data;
+		Node next;
+		Node(T val){
+			data = val;
+			next = null;
+		}
+	}
+	
+}
+
+public class middleOfLinkedList{
+	public static void main(String[] args) {
+		LinkedList<Integer> l1 = new LinkedList<Integer>();
+		l1.add(1);
+	}
+}

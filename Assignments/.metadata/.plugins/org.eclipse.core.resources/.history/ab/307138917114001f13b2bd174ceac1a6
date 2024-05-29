@@ -1,0 +1,21 @@
+package com.linkedlist;
+
+public class LinkedList {
+	class Node{
+		int data;
+		Node next;
+		Node(int val){
+			data = val;
+			next = null;
+		}
+	}
+	Node head;
+	LinkedList(){
+		head = null;
+	}
+	public static void add(int val)
+	{
+		Node node = new Node(val);
+		if(head==null) head = 
+	}
+}

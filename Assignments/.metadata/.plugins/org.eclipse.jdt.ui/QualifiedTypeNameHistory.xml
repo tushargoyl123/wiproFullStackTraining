@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.w3c.dom.Node"/>
+    <fullyQualifiedTypeName name="task2.FindMiddle"/>
+    <fullyQualifiedTypeName name="com.linkedlist.LinkedList"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="task5.removeDupFromLL"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="task1.CheckingBalBinaryTree"/>
+    <fullyQualifiedTypeName name="task1.CheckingBalBinaryTree.TreeNode"/>
+    <fullyQualifiedTypeName name="task2.TrieNode"/>
+    <fullyQualifiedTypeName name="task2.PrefixChecking"/>
+</qualifiedTypeNameHistroy>

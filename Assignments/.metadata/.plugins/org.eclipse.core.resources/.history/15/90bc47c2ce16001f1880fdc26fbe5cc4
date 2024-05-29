@@ -1,0 +1,79 @@
+package task2;
+
+class TrieNode {
+	private TrieNode[] children;
+	private boolean isEndOfWord;
+
+	public TrieNode() {
+		children = new TrieNode[26];
+		isEndOfWord = false;
+	}
+
+	public TrieNode getChild(char ch) {
+		return children[ch - 'a'];
+	}
+
+	public void setChild(char ch, TrieNode node) {
+		children[ch - 'a'] = node;
+	}
+
+	public boolean isEndOfWord() {
+		return isEndOfWord;
+	}
+
+	public void setEndOfWord(boolean isEndOfWord) {
+		this.isEndOfWord = isEndOfWord;
+	}
+}
+
+public class PrefixChecking {
+
+	private TrieNode root;
+
+	public PrefixChecking() {
+		root = new TrieNode();
+	}
+	public void insert(String word) {
+		TrieNode node = root;
+		for(char ch : word.toCharArray()) {
+			if(node.getChild(ch)==null) {
+				node.setChild(ch, node);
+			}
+			node = node.getChild(ch);
+		}
+		node.setEndOfWord(true);
+	}
+	public boolean startsWith(String prefix) {
+		TrieNode node = root;
+		for(char ch: prefix.toCharArray()) {
+			if(node.getChild(ch)==null) return false;
+			node = node.getChild(ch);
+		}
+		return true;
+	}
+	public boolean search(String word) {
+		TrieNode node = root;
+		for(char ch : word.toCharArray()) {
+			if(node.getChild(ch)==null) return false;
+			node = node.getChild(ch);
+		}
+		return node.isEndOfWord();
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		PrefixChecking pc = new PrefixChecking();
+		pc.insert("apple");
+		pc.insert("app");
+		System.out.println(pc.startsWith("app"));
+		System.out.println(pc.startsWith("appl"));
+		System.out.println(pc.startsWith("apb"));
+		
+		System.out.println(pc.search("apple"));
+		System.out.println(pc.search("app"));
+		System.out.println(pc.search("appl"));
+		
+		
+
+	}
+
+}

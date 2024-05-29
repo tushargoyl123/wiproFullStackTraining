@@ -1,0 +1,48 @@
+package task2;
+
+import java.util.LinkedList;
+
+class Node {
+	int data;
+	Node next;
+
+	Node(int data) {
+		this.data = data;
+		next = null;
+	}
+}
+
+class FindMiddle {
+	public static Node GetMiddleNode(Node head) {
+		if (head == null) {
+			return null;
+		}
+		Node slow = head;
+		Node fast = head;
+		while (fast != null && fast.next != null) {
+			slow = fast.next;
+			fast = fast.next.next;
+		}
+		return slow;
+	}
+}
+
+public class middleOfLinkedList {
+
+	public static void main(String[] args) {
+		Node head = new Node(1);
+		head.next = new Node(2);
+		head.next = new Node(3);
+		head.next = new Node(4);
+		head.next = new Node(5);
+		head.next = new Node(6);
+		Node middle = FindMiddle.GetMiddleNode(head);
+		System.out.println(middle.data);
+	}
+
+	public int getMiddle(LinkedList<Integer> l1) {
+
+		return -1;
+	}
+
+}

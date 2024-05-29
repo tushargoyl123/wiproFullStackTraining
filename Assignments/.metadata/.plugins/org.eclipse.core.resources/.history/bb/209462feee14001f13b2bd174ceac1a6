@@ -1,0 +1,23 @@
+package task3;
+
+import java.util.Queue;
+import java.util.Stack;
+
+public class SortingQueue {
+	
+	public static void sortQueue(Queue<Integer> queue) {
+		Stack<Integer> stack = new Stack<Integer>();
+		while(!(queue.isEmpty())) {
+			int current = queue.poll();
+			while(!stack.isEmpty() && stack.peek()>current) {
+				queue.add(stack.pop());
+			}
+			stack.push(current);
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
